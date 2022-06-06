@@ -23,3 +23,10 @@ select metric, round(val::numeric,2) FROM (
 ) tmp
 ORDER BY 1 ASC
 ;
+
+
+select * from loss_metrics_pct_all_months() order by date desc, metric asc;
+
+select * from loss_metrics_dollar_all_months() order by date desc, metric asc;
+
+select * from trades order by exit_time desc;

@@ -397,7 +397,7 @@ BEGIN
 	UNION
 	select
 		datefrom,
-		'K) -200$',
+		'K) 200$',
 		(SELECT count(*) from trades where  exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 200 and pnl_dollar < 300),
 		(SELECT round(100*((SELECT cast(count(*) as real) from trades where exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 200 and pnl_dollar < 300) / loss_cnt)::numeric,1)),
 		(SELECT round(100*((SELECT cast(count(*) as real) from trades where exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 200 and pnl_dollar < 300) / trade_cnt)::numeric,1)),
@@ -406,7 +406,7 @@ BEGIN
 	UNION
 	select
 		datefrom,
-		'L) -300$',
+		'L) 300$',
 		(SELECT count(*) from trades where  exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 300 and pnl_dollar < 400),
 		(SELECT round(100*((SELECT cast(count(*) as real) from trades where exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 300 and pnl_dollar < 400) / loss_cnt)::numeric,1)),
 		(SELECT round(100*((SELECT cast(count(*) as real) from trades where exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 300 and pnl_dollar < 400) / trade_cnt)::numeric,1)),
@@ -415,7 +415,7 @@ BEGIN
 	UNION
 	select
 		datefrom,
-		'M) -400$',
+		'M) 400$',
 		(SELECT count(*) from trades where  exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 400 and pnl_dollar < 500),
 		(SELECT round(100*((SELECT cast(count(*) as real) from trades where exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 400 and pnl_dollar < 500) / loss_cnt)::numeric,1)),
 		(SELECT round(100*((SELECT cast(count(*) as real) from trades where exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 400 and pnl_dollar < 500) / trade_cnt)::numeric,1)),
@@ -424,7 +424,7 @@ BEGIN
 	UNION
 	select
 		datefrom,
-		'N) -500$',
+		'N) 500$',
 		(SELECT count(*) from trades where  exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 500),
 		(SELECT round(100*((SELECT cast(count(*) as real) from trades where exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 500) / loss_cnt)::numeric,1)),
 		(SELECT round(100*((SELECT cast(count(*) as real) from trades where exit_time >= datefrom AND exit_time <= dateto and pnl_dollar >= 500) / trade_cnt)::numeric,1)),
