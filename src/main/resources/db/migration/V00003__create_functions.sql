@@ -46,7 +46,7 @@ select * from trade_metrics('2022-05-15', '2022-05-21') order by date desc;
 
 
 
-DROP FUNCTION trade_metrics_all_months();
+DROP FUNCTION IF EXISTS trade_metrics_all_months();
 CREATE OR REPLACE FUNCTION trade_metrics_all_months()
   RETURNS TABLE ("date" date, "avg win $" numeric, "avg loss $" numeric, "avg win %" numeric, "avg loss %" numeric, "trade count" bigint, "win count" bigint, "loss count" bigint, "B/E count" bigint, "win %" numeric, "loss %" numeric, 
 				 "B/E %" numeric,  "avg win $ per day" numeric, "avg loss $ per day" numeric, "avg $ per day" numeric, "total win $" numeric, "total loss $" numeric, "total B/E $" numeric, "total fees" numeric, "total $" numeric, "total $ inc fees" numeric)
