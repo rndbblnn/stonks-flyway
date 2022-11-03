@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/stonks
     username: postgres
-    password: password
+    password: postgre$$$
   flyway:
     baselineOnMigrate: true
     table: flyway_schema_history_ticker_tracker

@@ -7,7 +7,7 @@ plugins {
 flyway {
 	url = 'jdbc:postgresql://localhost:5432/stonks'
 	user = 'postgres'
-	password = 'password'
+	password = 'postgre$$$'
 }
 
 group = 'com.rno'
